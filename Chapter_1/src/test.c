@@ -1,9 +1,10 @@
 #include "../inc/test.h"
-static dupa dupa1 =
+structForTestS structForTest =
 {
-		.doubleZmienna = 2.0,
-		.zmienna = 3
+		.varDouble = 2.0,
+		.varInt = 3
 };
+
 double add(double a, double b)
 {
 	return a + b;
@@ -12,21 +13,21 @@ double add(double a, double b)
 void setup(void)
 {
     puts("\nRuns before the test");
-	printf("dupa init = %d\n"
-			"dupa init = %f\n",
-			dupa1.zmienna,
-			dupa1.doubleZmienna);
+	printf("var init = %d\n"
+			"var init = %f\n",
+			structForTest.varInt,
+			structForTest.varDouble);
 }
 
 void finish(void)
 {
     puts("\nRuns after the test");
-    dupa1.zmienna = 0;
-    dupa1.doubleZmienna = 0.0;
-	printf("dupa finish = %d\n"
-			"dupa finish = %f\n",
-			dupa1.zmienna,
-			dupa1.doubleZmienna);
+    structForTest.varInt = 0;
+    structForTest.varDouble = 0.0;
+	printf("var finish = %d\n"
+			"var finish = %f\n",
+			structForTest.varInt,
+			structForTest.varDouble);
 }
 
 void crash(void)

@@ -53,6 +53,10 @@ l1:
 
 clean:
 	$(call print_info,Cleaning)
+<<<<<<< HEAD
 	$(Q)$(MAKE) -f $(PROJECT_DIR)/Chapter_1/Makefile clean --no-print-directory
 	
 clean_libs:
+=======
+	$(Q)$(MAKE) -f $(PROJECT_DIR)/Chapter_1/Makefile clean --no-print-directory
+>>>>>>> [task] C exercise

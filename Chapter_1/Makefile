@@ -11,7 +11,7 @@ OBJS := $(SRCS:%.c=%.o)
 
 LIBS := -lcriterion
 
-EXEC := $(THIS_DIR)/add.out
+EXEC := $(THIS_DIR)/test.out
 
 %.o: %.c
 	$(call print_cc, $<)

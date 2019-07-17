@@ -6,26 +6,13 @@ TDIR := $(THIS_DIR)/test
 LDIR :=
 
 SRCS := $(wildcard $(SDIR)/*.c)
-<<<<<<< HEAD
-OBJS := $(SRCS:%.c=%.o)
-DEPS := $(wildcard $(IDIR)/*.h)+
-DEPS += $(wildcard $(EIDIR)/*.h)
-=======
 SRCS += $(wildcard $(TDIR)/*.c)
 OBJS := $(SRCS:%.c=%.o)
->>>>>>> [task] C exercise
 
 LIBS := -lcriterion
 
 EXEC := $(THIS_DIR)/add.out
 
-<<<<<<< HEAD
-#.PHONY:clean
-#test: FORCE
-#$(CC) -DTEST_MODE $(DIR_SRC)/*.c $(DIR_TEST)/*.c -I$(DIR_INC) -o $(TEXEC)
-
-=======
->>>>>>> [task] C exercise
 %.o: %.c
 	$(call print_cc, $<)
 	$(Q)$(CC) $(CFLAGS) -I$(IDIR) -c $< -o $@
@@ -37,10 +24,4 @@ $(EXEC): $(OBJS)
 clean:
 	$(call print_info,Cleaning)
 	$(Q)$(RM) $(OBJS)
-<<<<<<< HEAD
-	$(Q)$(RM) $(T_OBJS)
 	$(Q)$(RM) $(EXEC)
-	$(Q)$(RM) $(T_EXEC)
-=======
-	$(Q)$(RM) $(EXEC)
->>>>>>> [task] C exercise
